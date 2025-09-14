@@ -58,33 +58,30 @@ body {
 }
 
 /* content */
-
 /* home */
 .home {
   background-color: #eae4d3;
-  padding: 1rem 2rem;
-  padding-top: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 7rem;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 5rem 2rem;
 }
 
 .home-left {
-  /* background-color: #f4ac27; */
-  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: center;
+  text-align: left;
 }
 
 .home h1{
+  padding-top: 4rem;
   font-family: 'Gloock', serif;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem); 
   color: #384e35;
   margin-bottom: 1rem;
-  padding-bottom: 3rem;
 }
 
 .home p {
@@ -97,10 +94,26 @@ body {
 }
 
 .home img {
-  height: 200px;
+  max-width: 300px;
   border-radius: 30px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home img {
+    max-width: 70%;
+  }
+
+  .home-left {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* my life lately */
@@ -182,7 +195,8 @@ body {
   text-align: justify;
 }
 .card2 img{
-  height: 200px;
+  max-height: 180px;
+  width: 100%;
   border-radius: 20px;
   margin-bottom: 1rem;
 }
@@ -209,6 +223,11 @@ body {
   padding-bottom: 2rem;
 }
 
+.hobbies img{
+  width: 40%;
+  height: auto;
+  border-radius: 20px;
+}
 
 /* aset */
 .subtitle {
