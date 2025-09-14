@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular';
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #384e35;
+  padding: 1rem 2rem;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 65px;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*#f4ac27 kuning
+#eae4d3 cream
+#080706 hitam
+#384e35 hijau gelap
+*/
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 99px;
+  padding: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f4ac27; 
+}
+
+#home:target ~ .navbar .nav-links a[href="#home"],
+#about:target ~ .navbar .nav-links a[href="#about"],
+#hobbies:target ~ .navbar .nav-links a[href="#hobbies"],
+#project:target ~ .navbar .nav-links a[href="#project"] {
+  background-color: #f4ac27;
+  color: #384e35;
+  padding: 10px 15px;
+}
+
+/* content */
+
+/* home */
+.home {
+  background-color: #eae4d3;
+  padding: 1rem 2rem;
+  padding-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 7rem;
+}
+
+.home-left {
+  /* background-color: #f4ac27; */
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.home h1{
+  font-family: 'Gloock', serif;
+  font-size: 2.5rem;
+  color: #384e35;
+  margin-bottom: 1rem;
+  padding-bottom: 3rem;
+}
+
+.home p {
+  padding-bottom: 3rem;
+  max-width: 700px;
+  padding-right: 2rem;
+  text-align: justify;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.home img {
+  height: 200px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* my life lately */
+.scroll-container{
+  background-color: #384e35;
+  overflow: hidden;
+  padding: 3rem 2rem;
+}
+
+.scroll-content{
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+  padding: 1rem;
+}
+.scroll-content img{
+  height: 250px;
+  margin: 0 1rem;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* about me */
+.about {
+  background-color: #eae4d3;
+  padding: 3rem 2rem;
+}
+
+.card1{
+  background-color: #384e35;
+  color: white;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 40px;
+  width: 300px; 
+  height: 250px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+/* project */ 
+.project {
+  padding: 3rem 2rem;
+  background-color: #384e35;
+}
+
+.card-container {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; 
+}
+
+.card2{
+  background-color: #eae4d3;
+  padding: 40px 60px;
+  margin: 1rem;
+  border-radius: 40px;
+  width: 600px; 
+  height: 400px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+.card2 img{
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+/* hobies */
+.hobbies {
+  color: white;
+  background-color: #000000;
+  padding: 3rem 2rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hobbies p{
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-bottom: 2rem;
+}
+
+
+/* aset */
+.subtitle {
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+  font-size: 1.2rem;
+  color: #f4ac27;
+  margin-bottom: 1rem;
+}
+
+.button-yellow {
+  background-color: #f4ac27;
+  margin: 1rem;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.button-yellow:hover {
+  background-color: #384e35;
+  color: white;
+}
+
+.title{
+  font-family: 'Gloock', serif;
+  background-color: #eae4d3;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.title2{
+  font-family: 'Gloock', serif;
+  background-color: #384e35;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.title3{
+  font-family: 'Gloock', serif;
+  background-color: #000000;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+
+
